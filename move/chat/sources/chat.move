@@ -1,6 +1,3 @@
-// Copyright (c) Mysten Labs, Inc.
-// SPDX-License-Identifier: Apache-2.0
-
 module object_display::chat {
     // use std::ascii::{Self, String};
     // use std::option::{Self, Option, some};

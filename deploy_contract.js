@@ -1,4 +1,4 @@
-const { SuiMaster } = require('../suidouble');
+const { SuiMaster } = require('suidouble');
 const path = require('path');
 
 const run = async ()=>{
