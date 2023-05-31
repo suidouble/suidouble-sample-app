@@ -9,6 +9,7 @@
     "start": "node app.js run",
     "heroku-postbuild": "node app.js build"
   },
+  "author": "Jeka Kiselyov <jeka911@gmail.com> (https://github.com/jeka-kiselyov)",
   "engines": {
     "node": "18.16.0"
   },
