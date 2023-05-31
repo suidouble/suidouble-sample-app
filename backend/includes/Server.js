@@ -13,9 +13,9 @@ class Server {
 
         this.db = params.db || null;
 
-        if (!this.db) {
-            throw new Error('db param required for the server');
-        }
+        // if (!this.db) {
+        //     throw new Error('db param required for the server');
+        // }
 
         this._server = null;
 	}
