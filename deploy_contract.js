@@ -3,8 +3,11 @@ const path = require('path');
 
 const run = async ()=>{
     const provider = 'test';
+    // const provider = 'dev';
+    // const provider = 'main';
 
     const suiMaster = new SuiMaster({ debug: true, as: 'admin', provider: provider, });
+    // const suiMaster = new SuiMaster({ debug: true, phrase: 'secret phrase', provider: provider, });
 
     await suiMaster.requestSuiFromFaucet();
     await suiMaster.getBalance();
