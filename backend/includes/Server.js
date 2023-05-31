@@ -1,10 +1,10 @@
 const Fastify = require('fastify');
 
-const fastifyServerAuth = require('./FastifyServerAuth.js');
+// const fastifyServerAuth = require('./FastifyServerAuth.js');
 const fastifyCookie = require('@fastify/cookie');
 const fastifyFormbody = require('@fastify/formbody');
-const fastifyMongooseAPI = require('fastify-mongoose-api');
-const fastifyCors = require('@fastify/cors');
+// const fastifyMongooseAPI = require('fastify-mongoose-api');
+// const fastifyCors = require('@fastify/cors');
 
 class Server {
     constructor(params = {}) {
