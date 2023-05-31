@@ -147,7 +147,14 @@ export default {
             this.$emit('reply', this.chatResponse);
         },
         openOnExplorer() {
-            window.open('https://suiexplorer.com/object/'+this.chatResponse.address+'?network=devnet', '_blank');
+            let network = 'mainnet';
+            try {
+                network = (''+this.chatResponse._suiMaster.signer.getCurrentChain()).split('sui:').join('');
+            } catch (e) {
+                console.error(e);
+            }
+
+            window.open('https://suiexplorer.com/object/'+this.chatResponse.address+'?network='+network, '_blank');
         },  
         getColorN() {
             const author = this.chatResponse.fields.author ? this.chatResponse.fields.author : this.chatResponse.localProperties.author;

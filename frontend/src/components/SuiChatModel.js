@@ -131,24 +131,28 @@ class SuiChatModel extends EventTarget {
             id: packageId,
         });
 
-        let chatShopObjectId = null;
-        if (pkg.localProperties.chatShopObjectId) {
-            console.error('already here', pkg.localProperties.chatShopObjectId);
-
-            chatShopObjectId = pkg.localProperties.chatShopObjectId;
-        } else {
-            const createdEventsResponse = await pkg.fetchEvents('chat', {eventTypeName: 'ChatShopCreated', order: 'ascending'});
-            chatShopObjectId = createdEventsResponse.data[0].parsedJson.id;
-
-            pkg.localProperties.chatShopObjectId = chatShopObjectId;
-            console.error('got here', pkg.localProperties.chatShopObjectId);
+        try {
+            let chatShopObjectId = null;
+            if (pkg.localProperties.chatShopObjectId) {
+                console.error('already here', pkg.localProperties.chatShopObjectId);
+    
+                chatShopObjectId = pkg.localProperties.chatShopObjectId;
+            } else {
+                const createdEventsResponse = await pkg.fetchEvents('chat', {eventTypeName: 'ChatShopCreated', order: 'ascending'});
+                chatShopObjectId = createdEventsResponse.data[0].parsedJson.id;
+    
+                pkg.localProperties.chatShopObjectId = chatShopObjectId;
+                console.error('got here', pkg.localProperties.chatShopObjectId);
+            }
+    
+            this.pkg = pkg;
+            this.objectStorage = pkg.modules.chat.objectStorage;
+            this.isInitialized = true;
+    
+            await this.loadTopMessages();
+        } catch (e) {
+            console.error(e);
         }
-
-        this.pkg = pkg;
-        this.objectStorage = pkg.modules.chat.objectStorage;
-        this.isInitialized = true;
-
-        await this.loadTopMessages();
     }
 
     async loadTopMessages() {
