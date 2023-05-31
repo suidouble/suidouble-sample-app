@@ -16,6 +16,7 @@ class SuiChatModel extends EventTarget {
 
         this.packagesOnChains = {
             'sui:devnet': '0x81ef3f54c1f41149f7be63ab6d54b25ab73a2db1402734cbe016710acf17887e',
+            'sui:testnet': '0x7179bb4dd2b490a218e5bb68f72e05139f6aec7d31031d0f05343aefd2c33ebe',
         };
     }
 

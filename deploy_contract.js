@@ -2,7 +2,7 @@ const { SuiMaster } = require('../suidouble');
 const path = require('path');
 
 const run = async ()=>{
-    const provider = 'dev';
+    const provider = 'test';
 
     const suiMaster = new SuiMaster({ debug: true, as: 'admin', provider: provider, });
 
