@@ -27,7 +27,7 @@
     "mongoose": "^6.0.12",
     "node-fetch": "^2.6.7",
     "nodemailer": "^6.7.5",
-    "suidouble": "^0.0.10",
+    "suidouble": "^0.0.12",
     "winston": "^2.3.1"
   },
   "devDependencies": {
