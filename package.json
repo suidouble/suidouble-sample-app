@@ -3,6 +3,8 @@
   "version": "0.1.3",
   "private": true,
   "scripts": {
+    "test": "tap -j=1 ./test/*.test.js",
+    "coverage": "tap -j=1 ./test/*.test.js",
     "serve": "node app.js run",
     "dev": "node app.js dev",
     "build": "node app.js build",
@@ -53,7 +55,8 @@
     "vue-cli-plugin-quasar": "~5.0.2",
     "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.0.11",
-    "worker-loader": "^3.0.8"
+    "worker-loader": "^3.0.8",
+    "tap": "^16.3.4"
   },
   "eslintConfig": {
     "root": true,

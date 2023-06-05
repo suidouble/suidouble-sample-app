@@ -13,4 +13,10 @@ Code pieces to take a look at:
 - [connect button](shared/components/Auth/SignInWithSui.vue) 
 - [sui blockchain chat components](frontend/src/components) 
 - deploy smart contract script - [deploy_contract.js](deploy_contract.js)
-- run integration tests script - [test_contract.js](test_contract.js)
+- run integration tests - [test_the_move_contract.test.js](test/test_the_move_contract.test.js)
+
+### executing integration tests:
+
+```bash
+npm run test
+```
