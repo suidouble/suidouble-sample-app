@@ -29,7 +29,7 @@
     "mongoose": "^6.0.12",
     "node-fetch": "^2.6.7",
     "nodemailer": "^6.7.5",
-    "suidouble": "^0.0.16",
+    "suidouble": "^0.0.26",
     "winston": "^2.3.1"
   },
   "devDependencies": {
@@ -49,14 +49,15 @@
     "nodemon": "^2.0.14",
     "pinia": "^2.0.14",
     "quasar": "^2.11.6",
+    "tap": "^16.3.4",
     "ts-loader": "^8.0.16",
     "val-loader": "^2.1.2",
     "vue": "^3.0.0",
     "vue-cli-plugin-quasar": "~5.0.2",
     "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.0.11",
-    "worker-loader": "^3.0.8",
-    "tap": "^16.3.4"
+    "vue-sui": "^0.0.13",
+    "worker-loader": "^3.0.8"
   },
   "eslintConfig": {
     "root": true,

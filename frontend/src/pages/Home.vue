@@ -17,9 +17,9 @@
         </div>
         <div class="col-12 col-md-8">
             <div class="text-center">
-                <SignInWithSui auto @suiMaster="onSuiMaster" />
+                <SignInWithSuiButton auto @suiMaster="onSuiMaster" :defaultChain="defaultChain" @wrongchain="onOtherChain" />
             </div>
-            <SuiChat :suiMaster="suiMaster" v-if="suiMaster" />
+            <SuiChat :suiMaster="suiMaster" v-if="suiMaster"  />
         </div>
     </div>
 
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import SignInWithSui from 'shared/components/Auth/SignInWithSui';
+import { SignInWithSuiButton } from 'vue-sui';
 import SuiChat from '../components/SuiChat';
 
 
@@ -41,12 +41,13 @@ export default {
 	},
     components: {
         // SuiAsync,
-        SignInWithSui,
+        SignInWithSuiButton,
         SuiChat,
     },
 	data() {
 		return {
             suiMaster: null,
+            defaultChain: 'sui:mainnet',
 		}
 	},
     watch: {
@@ -54,12 +55,13 @@ export default {
 	methods: {
         async onSuiMaster(suiMaster) {
             this.suiMaster = suiMaster;
-        } 
+        },
+        async onOtherChain(walletIsConnectedTo) {
+            this.suiMaster = null;
+            this.defaultChain = walletIsConnectedTo;
+        }
 	},
     computed: {
-        authenticated() {
-            return (!!this.$store.sessionUser.me);
-        }
     },
     beforeMount() {
     },
