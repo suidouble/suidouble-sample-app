@@ -29,7 +29,7 @@
     "mongoose": "^6.0.12",
     "node-fetch": "^2.6.7",
     "nodemailer": "^6.7.5",
-    "suidouble": "^0.0.26",
+    "suidouble": "^0.0.48",
     "winston": "^2.3.1"
   },
   "devDependencies": {
@@ -56,7 +56,7 @@
     "vue-cli-plugin-quasar": "~5.0.2",
     "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.0.11",
-    "vue-sui": "^0.0.13",
+    "vue-sui": "^0.0.48",
     "worker-loader": "^3.0.8"
   },
   "eslintConfig": {
