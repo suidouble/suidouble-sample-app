@@ -3,7 +3,7 @@ if (typeof __webpack_require__ === 'function') {
 }
 
 const path = require('path');
-const pjson = require(path.join(__dirname, '../package.json'));
+const pjson = require(path.join(__dirname, '../../package.json'));
 
 // let isHeroku = false;
 // if ( (process.env._ && process.env._.indexOf("heroku")  != -1) || (process.env.NODE && ~process.env.NODE.indexOf("heroku") != -1) ) {
