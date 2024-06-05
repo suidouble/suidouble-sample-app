@@ -49,10 +49,10 @@ class SuiChatModel extends EventTarget {
         const messageTextAsBytes = [].slice.call(new TextEncoder().encode(messageText)); // regular array with utf data
 
         let method = 'post';
-        let moveParams = [chatShopObjectId, messageTextAsBytes, 'metadata'];
+        let moveParams = [chatShopObjectId, this.pkg.arg('vector<u8>', messageTextAsBytes), this.pkg.arg('string', 'metadata')];
         if (replyToTopMessageId) {
             method = 'reply';
-            moveParams = [replyToTopMessageId, messageTextAsBytes, 'metadata'];
+            moveParams = [replyToTopMessageId, this.pkg.arg('vector<u8>', messageTextAsBytes), this.pkg.arg('string', 'metadata')];
         }
 
         let secondUserCallResult = await this.pkg.moveCall('chat', method, moveParams);
