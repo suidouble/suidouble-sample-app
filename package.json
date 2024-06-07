@@ -37,7 +37,7 @@
     "vue-cli-plugin-quasar": "~5.1.0",
     "vue-eslint-parser": "^9.4.3",
     "vue-router": "^4.3.2",
-    "vue-sui": "1.0.4-6"
+    "vue-sui": "1.0.4-10"
   },
   "eslintConfig": {
     "root": true,
